@@ -49,12 +49,13 @@ def item(request, id):
         text = f"""
         <h1>Товар с id={id} не найден</h1>
         """
+    text += '\n<a href="/items">назад к списку товаров</a>'
     return HttpResponse(text)
 
 def items_list(request):
     item_list = []
     for index, item in enumerate(items, start=1):
-        item_list.append(f"<li>{item['id']}. {item['name']} (Количество: {item['quantity']})</li>")
+        item_list.append(f'<li><a href="item/{item['id']}">{item['id']}. {item['name']} (Количество: {item['quantity']})</a></li>')
 
     result = '<ol>'+'\n'.join(item_list) + '\n</ol>'
     return HttpResponse(result)
