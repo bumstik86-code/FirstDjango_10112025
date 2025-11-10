@@ -20,7 +20,7 @@ def home(request):
 def about(request):
     person = {'name': 'Иван',
               'fathername': 'Петрович',
-              'surname': 'Иванов', 
+              'surname': 'Иванов',
               'phone_number': '8-923-600-01-02',
               'email': 'vasya@mail.ru'}
     text = f"""
@@ -42,11 +42,19 @@ def item(request, id):
             text = f"""
             <h1>Название: {index['name']}</h1>
             <h1>Количество: {index['quantity']}</h1>
-            """ 
+            """
             break
-        
+
     if index is None:
         text = f"""
         <h1>Товар с id={id} не найден</h1>
         """
     return HttpResponse(text)
+
+def items_list(request):
+    item_list = []
+    for index, item in enumerate(items, start=1):
+        item_list.append(f"<li>{item['id']}. {item['name']} (Количество: {item['quantity']})</li>")
+
+    result = '<ol>'+'\n'.join(item_list) + '\n</ol>'
+    return HttpResponse(result)
