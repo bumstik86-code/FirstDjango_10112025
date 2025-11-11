@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{item.name}}]</title>
+    <title>Errors</title>
 </head>
 <body>
     <nav class="navbar">
         <a href="/">Home</a> <a href="/items">Items</a> <a href="/about">About</a>
     </nav>
-    <h2>{{item.id}}</h2>
-    Наименование: {{item.name}} <br>
-    Производитель: {{item.brand}} <br>
-    Количество: {% if item.count != 0 %}{{item.count}}{% else %}Товар отсутствует{% endif %}
+    <ol>
+    {% for error in errors %}
+        <li>{{error}}</li>
+    {% endfor %}
+    </ol>
     <br>
     <br>
     <a href="/items">Назад к списку товаров</a>

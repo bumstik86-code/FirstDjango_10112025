@@ -12,8 +12,8 @@
     <h2>Список товаров:</h2>
     <ol>
         {% for item in goods  %}
-        <li><a href="item/{{item.id}}">  {{item.name}} (Количество: {% if item.quantity != 0 %}{{item.quantity}}{% else %}Товар отсутствует{% endif %}) </a> </li>
+        <li><a href="item/{{item.id}}">  {{item.name}} (Количество: {% if item.count != 0 %}{{item.count}}{% else %}Товар отсутствует{% endif %}) </a> </li>
         {% endfor %}
-    </ol>   
+    </ol>
 </body>
 </html>
