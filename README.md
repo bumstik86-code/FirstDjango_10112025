@@ -2,21 +2,29 @@
 
 ## Инструкция по развертыванию проекта
 1. Создать виртуальное окружение
-` ` `  
+```  
 python3 -m venv django_venv
-` ` `
+```
 2. Активировать виртуальное окружение
-` ` ` 
+``` 
 source django_venv/bin/activate
-` ` ` 
+``` 
 3.  Установить нужные библиотеки в виртуальное окружение
-` ` ` 
+``` 
 pip install -r requirements.txt
-` ` ` 
-4. Запуск сервера
-` ` `
+``` 
+4. Применить миграции
+```
+python manage.py migrate
+```
+5. Запуск сервера
+```
 python manage.py runserver
-` ` `
+```
+##  Запуск `ipithon` в контексте `django` приложений
+```
+python manage.py shell_plus --ipython --print-sql
+```
 ## Дополнительно
 1. Полезное расширение для шаблонов: `django`
 ```
