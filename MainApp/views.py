@@ -9,13 +9,12 @@ items = [
 {"id": 8, "name": "Кепка" ,"quantity":124},
 ]
 
-def home(request):
-    author = 'Сиволобов И. В.'
-    text = f"""
-    <h1>"Изучаем django"</h1>
-    <strong>Автор</strong>: <i> {author} </i>
-    """
-    return HttpResponse(text)
+def home(request) -> HttpResponse:
+    context ={
+        "name": "Иванов Иван Иванович",
+        "email": "my_mail@mail.ru"
+    }
+    return render(request, "index.html", context=context)
 
 def about(request):
     person = {'name': 'Иван',
