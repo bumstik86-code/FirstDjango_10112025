@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 # Create your views here.
 items = [
 {"id": 1, "name": "Кроссовки abibas" ,"quantity":5},
@@ -25,11 +25,10 @@ def about(request):
     return render(request, "about.html", context=person)
 
 def item(request, id):
-    context={'bad_id': id}
     for item in items:
         if item['id'] == id:
             return render(request, "item.html", context=item)
-    return render(request, "item.html", context=context)
+    return HttpResponseNotFound(f"Товар с id = {id} отсутствует.")
 
 
 def items_list(request) -> HttpResponse:

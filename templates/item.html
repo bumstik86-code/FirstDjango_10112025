@@ -13,14 +13,9 @@
             <li><a href="/about">About</a></li>
         </ul>
     </nav>
-
-    {% if bad_id %}
-        <h2>Товар с id = {{bad_id}} отсутствует.</h2>
-    {% else %}
-        <h2>{{id}}</h2>
-        Наименование: {{name}} <br>
-        Количество: {% if quantity != 0 %}{{quantity}}{% else %}Товар отсутствует{% endif %} 
-    {% endif %}
+    <h2>{{id}}</h2>
+    Наименование: {{name}} <br>
+    Количество: {% if quantity != 0 %}{{quantity}}{% else %}Товар отсутствует{% endif %} 
 <br>
 <br>
 <a href="/items">Назад к списку товаров</a>
