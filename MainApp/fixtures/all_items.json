@@ -5,7 +5,8 @@
     "fields": {
         "name": "Кроссовки",
         "brand": "abibas",
-        "count": 10
+        "count": 10,
+        "description": "Красные кроссовки, чтобы бежать быстрее"
     }
 },
 {
@@ -14,7 +15,8 @@
     "fields": {
         "name": "Куртка кожаная",
         "brand": "Турция",
-        "count": 2
+        "count": 2,
+        "description": "Нежная кожа молодого дермантина"
     }
 },
 {
@@ -23,7 +25,8 @@
     "fields": {
         "name": "Coca-cola",
         "brand": "Cola",
-        "count": 12
+        "count": 12,
+        "description": "Веселье приносит... И уносит..."
     }
 },
 {
@@ -32,7 +35,8 @@
     "fields": {
         "name": "Картофель фри",
         "brand": "ВиТ",
-        "count": 0
+        "count": 0,
+        "description": "Вкусно и четко"
     }
 },
 {
@@ -41,7 +45,8 @@
     "fields": {
         "name": "Кепка",
         "brand": "ШТФ",
-        "count": 124
+        "count": 124,
+        "description": "Модный кепарик для модных пацанчиков"
     }
 }
 ]
