@@ -7,16 +7,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/items">Items</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
+        <a href="/">Home</a> <a href="/items">Items</a> <a href="/about">About</a>
     </nav>
     <h2>Список товаров:</h2>
     <ol>
         {% for item in goods  %}
-        <li> {{item.name}} (Количество: {% if item.quantity != 0 %}{{item.quantity}}{% else %}Товар отсутствует{% endif %}) <a href="item/{{item.id}}"> Перейти </a> </li>
+        <li><a href="item/{{item.id}}">  {{item.name}} (Количество: {% if item.quantity != 0 %}{{item.quantity}}{% else %}Товар отсутствует{% endif %}) </a> </li>
         {% endfor %}
     </ol>   
 </body>
