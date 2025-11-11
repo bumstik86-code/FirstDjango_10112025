@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page</title>
+    <title>About</title>
 </head>
 <body>
     <nav class="navbar">
@@ -13,11 +13,12 @@
             <li><a href="/about">About</a></li>
         </ul>
     </nav>
-    <h1>Приветствую!</h1>
-    Меня зовут: <i>{{name}}</i><br>
-    Мой email: <i>{{email}}</i><br>
-    <br>
-    <p>Это главная страница сайта</p>
-    <i>Сайт пока в разработке...</i>  
+    <ul>
+        <li>Имя: <strong>{{name}}</strong></li>
+        <li>Отчество: <strong>{{fathername}}</strong></li>
+        <li>Фамилия: <strong>{{surname}}</strong></li>
+        <li>телефон: <strong>{{phone_number}}</strong></li>
+        <li>email: <strong>{{email}}</strong></li>
+    </ul>
 </body>
 </html>
