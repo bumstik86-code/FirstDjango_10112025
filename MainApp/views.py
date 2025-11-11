@@ -24,8 +24,12 @@ def about(request):
               'email': 'vasya@mail.ru'}
     return render(request, "about.html", context=person)
 
-def item(request, id): 
-    return render(request, "item.html", context={'goods': items, 'req_id': id})
+def item(request, id):
+    context={'bad_id': id}
+    for item in items:
+        if item['id'] == id:
+            return render(request, "item.html", context=item)
+    return render(request, "item.html", context=context)
 
 
 def items_list(request) -> HttpResponse:

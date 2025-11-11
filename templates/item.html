@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товар</title>
+    <title>{{name}}]</title>
 </head>
 <body>
     <nav class="navbar">
@@ -14,13 +14,13 @@
         </ul>
     </nav>
 
-    {% for item in goods  %}
-        {% if item.id == req_id %}
-            <h2>{{item.id}}</h2>
-            Наименование: {{item.name}} <br>
-            Количество: {% if item.quantity != 0 %}{{item.quantity}}{% else %}Товар отсутствует{% endif %}   
-        {% endif %}
-    {% endfor %}
+    {% if bad_id %}
+        <h2>Товар с id = {{bad_id}} отсутствует.</h2>
+    {% else %}
+        <h2>{{id}}</h2>
+        Наименование: {{name}} <br>
+        Количество: {% if quantity != 0 %}{{quantity}}{% else %}Товар отсутствует{% endif %} 
+    {% endif %}
 <br>
 <br>
 <a href="/items">Назад к списку товаров</a>
