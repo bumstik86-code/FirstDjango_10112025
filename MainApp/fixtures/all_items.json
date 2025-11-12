@@ -1,12 +1,51 @@
 [
 {
+    "model": "MainApp.color",
+    "pk": 1,
+    "fields": {
+        "name": "red"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 2,
+    "fields": {
+        "name": "green"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 3,
+    "fields": {
+        "name": "blue"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 4,
+    "fields": {
+        "name": "yellow"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 5,
+    "fields": {
+        "name": "brown"
+    }
+},
+{
     "model": "MainApp.item",
     "pk": 1,
     "fields": {
         "name": "Кроссовки",
         "brand": "abibas",
         "count": 10,
-        "description": "Красные кроссовки, чтобы бежать быстрее"
+        "description": "Красные кроссовки, чтобы бежать быстрее",
+        "colors": [
+            1,
+            3
+        ]
     }
 },
 {
@@ -16,7 +55,11 @@
         "name": "Куртка кожаная",
         "brand": "Турция",
         "count": 2,
-        "description": "Нежная кожа молодого дермантина"
+        "description": "Нежная кожа молодого дермантина",
+        "colors": [
+            1,
+            2
+        ]
     }
 },
 {
@@ -26,7 +69,10 @@
         "name": "Coca-cola",
         "brand": "Cola",
         "count": 12,
-        "description": "Веселье приносит... И уносит..."
+        "description": "Веселье приносит... И уносит...",
+        "colors": [
+            3
+        ]
     }
 },
 {
@@ -36,7 +82,8 @@
         "name": "Картофель фри",
         "brand": "ВиТ",
         "count": 0,
-        "description": "Вкусно и четко"
+        "description": "Вкусно и четко",
+        "colors": []
     }
 },
 {
@@ -46,7 +93,8 @@
         "name": "Кепка",
         "brand": "ШТФ",
         "count": 124,
-        "description": "Модный кепарик для модных пацанчиков"
+        "description": "Модный кепарик для модных пацанчиков",
+        "colors": []
     }
 }
 ]
