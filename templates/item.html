@@ -12,7 +12,7 @@
     <h2>{{item.id}}</h2>
     Наименование: {{item.name}} <br>
     Производитель: {{item.brand}} <br>
-    Количество: {% if item.count != 0 %}{{item.count}}{% else %}Товар отсутствует{% endif %}
+    Количество: {% if item.count != 0 %}{{item.count}}{% else %}товара нет на складе{% endif %}
     <br>
     <br>
     <a href="/items">Назад к списку товаров</a>
