@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{item.name}}]</title>
-</head>
-<body>
-    <nav class="navbar">
-        <a href="/">Home</a> <a href="/items">Items</a> <a href="/about">About</a>
-    </nav>
+{% extends "base.html" %}
+{% block title %} Item page {% endblock  %}
+
+{% block content %}
+    {{ block.super }}
     <h2>{{item.id}}</h2>
     <div>
         <p>Наименование: {{item.name}}</p>
@@ -23,6 +17,5 @@
         <p>Описание {{item.description}}</p>
     </div>
     <br>
-    <a href="/items">Назад к списку товаров</a>
-</body>
-</html>
+
+{% endblock  %}

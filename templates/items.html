@@ -1,45 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары</title>
-    <style>
-        ul.hr {
-            list-style: none; /* Убирает маркеры списка */
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-        ul.hr li {
-            display: inline-block; /* Делает элементы списка "inline" */
-            width: 200px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            text-align: center;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        li p { /* Стилизация для описания внутри элемента списка */
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <a href="/">Home</a> <a href="/items">Items</a> <a href="/about">About</a>
-    </nav>
+{% extends "base.html" %}
+{% block title %} Item page {% endblock  %}
+
+{% block content %}
+    {{ block.super }}
     <h2>Список товаров:</h2>
-    <ul class="hr">
+
+    <div class="items">
         {% for item in goods  %}
-        <li>
-            <a href="item/{{item.id}}">
-                <strong>{{item.name}}</strong>
+        <div class="item">
+            <a href='{% url "item-detail" item.id %}'>
+                <p class="item_name">{{item.name}}</p>
+                <p>Описание товара:</p>
                 <p>{{item.description}}</p>
             </a>
-        </li>
+        </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock  %}
