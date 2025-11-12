@@ -32,8 +32,10 @@ def item(request, item_id):
     except ObjectDoesNotExist:
         return render(request, "errors.html", {'errors': [f'Item with Id= {item_id} not found.']})
     else:
+        colors = item.colors.all()
         context={
-            'item': item
+            'item': item,
+            'colors': colors
         }
         return render(request, "item.html", context=context)
 
